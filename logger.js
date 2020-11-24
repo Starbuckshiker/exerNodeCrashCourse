@@ -10,4 +10,14 @@ class Logger extends EventEmitter {
     }
 }
 
-module.exports = Logger;
+//module.exports = Logger;
+
+
+
+const logger = new Logger();
+
+logger.on('message', data => console.log('Called Listener', data ));
+
+logger.log("Meow World");
+logger.log("Did you say Meow");
+logger.log("Meow");
